@@ -2,7 +2,7 @@
 
 If you work with offline SYMAPI databases frequently, you've probably encountered cases where you can't open a DMX SYMAPI database on a recent version of Solutions Enabler. Getting around this typically means you must maintain several different versions of Solutions Enabler, to ensure that you can read SYMAPI databases produced by DMX, VMAX, and VMAX^3 arrays at diverse code levels. And because only one instance/version of Solutions Enabler can be installed on any given OS instance, you end up building and maintaining several virtual machines, each with a different version of Solutions Enabler installed.
 
-No big deal, really. But it gets kind of annoying when the states of these virtual machines diverge over time. For example, when you manually install ad-hoc packages, change security settings, apply patches, modify your .dotfiles, etc.
+No that big of a deal, really. But it does get kind of annoying when the states of these virtual machines diverge over time. For example, when you manually install ad-hoc packages, change security settings, apply patches, modify your .dotfiles, etc.
 
 Also, every time you need to use a particular version of Solutions Enabler, you have to boot a virtual machine -- which takes a while, and chews up memory/CPU resources just to do the same thing your host OS is already doing -- and possibly just to do the same thing that other VMs you're hosting are also doing. There's a ton of 'effort duplication' going on here just to run a particular version of Solutions Enabler on your laptop.
 
@@ -18,7 +18,7 @@ Ok, I get it; it's not for production. So what's the point then?
 
 I can think of a few good use cases:
 
-* Provides a safe "read-only" development environment for creating custom reports in environments with multiple generations of Symmetrix systems.
+* Provides a safe "read-only" development sandbox for creating custom reports in environments with multiple generations of Symmetrix systems.
 * You're in an EMC or Partner pre-sales, post-sales, or support role, and you work with Symmetrix systems on a regular basis. [Offline SYMCLI](http://blog.scummins.com/?p=56) is a very useful for people who help other organizations install, manage, and support their VMAX arrays.
 * You work with Symmetrix systems on a regular basis, and you want to learn more about [Docker](https://docker.com/).
 
@@ -26,10 +26,9 @@ I can think of a few good use cases:
 
 # What does it look like?
 
-Well, my new workflow is significantly simplified, and I no longer have to boot up different VMs to use different versions of Solutions Enabler (SE). Generally, I know which version of SE I need for a given task, so I'll start up and enter a Docker container for that particular SE version. This takes about 2 seconds, and it looks like this:
+Well, my new workflow is significantly simplified, and I no longer have to boot up different VMs to use different versions of Solutions Enabler (SE). Generally, I know which version of SE I need for a given task, so I'll start up and enter a Docker container for that particular SE version. This takes about a second, and it looks like this:
 
--- insert animated GIF here --
-
+![](http://blog.scummins.com/wp-content/uploads/2014/11/SE7.6_enter_exit.gif)
 
 The commands I used above ('se74', 'se76', 'and 'se8') are just aliases for starting and attaching to version-specific SE containers.
 
@@ -99,9 +98,10 @@ cd $HOME/Projects/docker/symcli/se76
 docker build -t="se76” .
 ~~~
 
+
 The “docker images” command should list the new se76 image.
 
--- screenshot --
+![](http://blog.scummins.com/wp-content/uploads/2014/11/ss_docker_images.png)
 
 ## Create SE Docker Containers from these Images
 
