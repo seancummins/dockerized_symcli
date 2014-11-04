@@ -162,9 +162,9 @@ cd ~
 export SYMCLI_DB_FILE=symapi_db.bin
 ~~~
 
-- Now you can execute offline SYMCLI commands.
+* Now you can execute offline SYMCLI commands.
 
-- When you're done, exit the container by detaching (Ctrl-P, Ctrl-Q), or by exiting the shell. The shell is essentially PID 1 within the container, so killing it will stop the container -- but starting it again takes like a second, so this is fine.
+* When you're done, exit the container by detaching (Ctrl-P, Ctrl-Q), or by exiting the shell. The shell is essentially PID 1 within the container, so killing it will stop the container -- but starting it again takes like a second, so this is fine.
 
 # That's It!
 For the most part, offline SYMCLI seems to run fine inside containers. I’ve seen some cases where commands will take longer to complete (e.g 'symcfg list -v'), but other than that I haven’t had many issues (yet). At some point I’ll simplify this setup process with a private Docker registry and/or fig, but that’s a project for another day.
