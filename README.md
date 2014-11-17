@@ -26,7 +26,7 @@ I can think of a few good use cases:
 
 Well, my new workflow is significantly simplified, and I no longer have to boot up different VMs to use different versions of Solutions Enabler (SE). Generally, I know which version of SE I need for a given task, so I'll start up and enter a Docker container for that particular SE version. This takes about a second, and it looks like this:
 
-![](http://blog.scummins.com/wp-content/uploads/2014/11/SE7.6_enter_exit.gif)
+![](usage_screenshot.gif)
 
 The commands I used above ('se74', 'se76', 'and 'se8') are just aliases for starting and attaching to version-specific SE containers.
 
