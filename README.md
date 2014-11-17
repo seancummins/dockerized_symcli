@@ -1,3 +1,5 @@
+# Dockerized SYMCLI
+
 If you work with offline SYMAPI databases frequently, you've probably encountered cases where you can't open a DMX SYMAPI database on a recent version of Solutions Enabler. Getting around this typically means you must maintain several different versions of Solutions Enabler, to ensure that you can read SYMAPI databases produced by DMX, VMAX, and VMAX^3 arrays at diverse code levels. And because only one instance/version of Solutions Enabler can be installed on any given OS instance, you end up building and maintaining several virtual machines, each with a different version of Solutions Enabler installed.
 
 No that big of a deal, really. But it does get kind of annoying when the states of these virtual machines diverge over time. For example, when you manually install ad-hoc packages, change security settings, apply patches, modify your .dotfiles, etc.
