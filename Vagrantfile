@@ -14,21 +14,21 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     d.build_image "/vagrant/se8", args: "-t='se8'"
     d.run "se8",
       cmd: "/bin/zsh",
-      args: "-v /home/vagrant/host:/root -w /root -h se8 --name='se8' -i -t"
+      args: "-v /home/vagrant/host:/root -w /root -h dockerized_se8 --name='se8' -i -t"
   end
 
   config.vm.provision "docker" do |d|
     d.build_image "/vagrant/se76", args: "-t='se76'"
     d.run "se76",
       cmd: "/bin/zsh",
-      args: "-v /home/vagrant/host:/root -w /root -h se76 --name='se76' -i -t"
+      args: "-v /home/vagrant/host:/root -w /root -h dockerized_se76 --name='se76' -i -t"
   end
 
   config.vm.provision "docker" do |d|
     d.build_image "/vagrant/se74", args: "-t='se74'"
     d.run "se74",
       cmd: "/bin/zsh",
-      args: "-v /home/vagrant/host:/root -w /root -h se74 --name='se74' -i -t"
+      args: "-v /home/vagrant/host:/root -w /root -h dockerized_se74 --name='se74' -i -t"
   end
 
 end
