@@ -6,7 +6,14 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "ubuntu/trusty64"
+
+  config.vm.provision "fix-no-tty", type: "shell" do |s|
+    s.privileged = false
+    s.inline = "sudo sed -i '/tty/!s/mesg n/tty -s \\&\\& mesg n/' /root/.profile"
+  end
+
   config.vm.provision :shell, path: "bootstrap.sh"
+
   config.vm.network :forwarded_port, host: 4567, guest: 2376
   config.vm.synced_folder "~", "/home/vagrant/host"
 
