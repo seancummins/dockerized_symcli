@@ -6,10 +6,12 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "ubuntu/trusty64"
+#  config.vm.box = "vmware/photon"
 
   config.vm.provision "fix-no-tty", type: "shell" do |s|
     s.privileged = false
     s.inline = "sudo sed -i '/tty/!s/mesg n/tty -s \\&\\& mesg n/' /root/.profile"
+    s.inline = "sudo apt-get update -y"
   end
 
   config.vm.provision :shell, path: "bootstrap.sh"
@@ -39,4 +41,3 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
 end
-
