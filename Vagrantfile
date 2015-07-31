@@ -20,6 +20,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "~", "/home/vagrant/host"
 
   config.vm.provision "docker" do |d|
+    d.build_image "/vagrant/se_base", args: "-t='se_base'"
+  end
+
+  config.vm.provision "docker" do |d|
     d.build_image "/vagrant/se8", args: "-t='se8'"
     d.run "se8",
       cmd: "/bin/zsh",

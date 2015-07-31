@@ -1,8 +1,6 @@
-# Version 0.0.2
-FROM centos:centos6
+# Version 0.0.3
+FROM se_base
 MAINTAINER Sean Cummins "sean.cummins@emc.com"
-RUN yum -y update
-RUN yum -y install tar hostname glibc.i686 git zsh sudo man
 ADD se7628-Linux-i386-ni.tar.gz /tmp
 WORKDIR /tmp
 RUN ./se7628_install.sh -install -64bit -silent
