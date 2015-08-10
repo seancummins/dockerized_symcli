@@ -1,5 +1,5 @@
-# Version 0.0.3
-FROM se_base
+# Version 0.0.4
+FROM seancummins/se_base
 MAINTAINER Sean Cummins "sean.cummins@emc.com"
 ADD se7400-Linux-i386-ni.tar.gz /tmp
 WORKDIR /tmp

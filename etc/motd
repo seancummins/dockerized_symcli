@@ -1,0 +1,23 @@
+
+
+#############################################
+
+Dockerized SYMCLI
+
+- For SYMCLI 7.4, type 'se74'
+- For SYMCLI 7.6, type 'se76'
+- For SYMCLI 8.0, type 'se8'
+
+The home directory in each SYMCLI container should
+be mapped to your host computer's home directory,
+so all of your files should be visible from $HOME.
+
+Navigate to the directory containing your SYMAPI DB,
+and then set the SYMCLI_DB_FILE environment variable
+to the SYMAPI DB filename.
+
+For example: export SYMCLI_DB_FILE=symapi_db.bin
+
+Bugs/Requests? Contact sean.cummins@emc.com.
+
+#############################################
