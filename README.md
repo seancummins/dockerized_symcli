@@ -111,5 +111,16 @@ Now you can execute offline SYMCLI commands.
 
 When you're done, exit the container (just type exit or Ctrl-D), then exit the host VM (same deal).
 
+
+Personally, I use the following bash/zsh aliases from my MacBook to enter each container. They handle starting the host VM (if necessary), SSHing to it, and attaching to the relevant container. And when you're done, you are returned to your previous working directory.
+
+~~~bash
+alias se8='PREVDIR=$PWD && cd ~/Projects/docker/symcli && vagrant ssh -c "docker start se8 && docker attach se8" || { vagrant up && vagrant ssh -c "docker start     se8 && docker attach se8" } && cd $PREVDIR'
+alias se76='PREVDIR=$PWD && cd ~/Projects/docker/symcli && vagrant ssh -c "docker start se76 && docker attach se76" || { vagrant up && vagrant ssh -c "docker st    art se76 && docker attach se76" } && cd $PREVDIR'
+alias se74='PREVDIR=$PWD && cd ~/Projects/docker/symcli && vagrant ssh -c "docker start se74 && docker attach se74" || { vagrant up && vagrant ssh -c "docker st    art se74 && docker attach se74" } && cd $PREVDIR'
+alias symcli='PREVDIR=$PWD && cd ~/Projects/docker/symcli && vagrant ssh || { vagrant up && vagrant ssh } && cd $PREVDIR'
+
+~~~
+
 # That's It!
 For the most part, offline SYMCLI seems to run fine inside containers. I’ve seen some cases where commands will take longer to complete (e.g 'symcfg list -v'), but other than that I haven’t had many issues (yet).
