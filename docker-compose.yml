@@ -1,0 +1,31 @@
+se8:
+    build: se8
+    volumes: 
+        - ~:/root
+    container_name: se8
+    working_dir: /root
+    hostname: dockerized_se8
+    stdin_open: true
+    tty: true
+    command: /bin/zsh
+se76:
+    build: se76
+    volumes: 
+        - ~:/root
+    container_name: se76
+    working_dir: /root
+    hostname: dockerized_se76
+    stdin_open: true
+    tty: true
+    command: /bin/zsh
+se74:
+    build: se74
+    volumes: 
+        - ~:/root
+    container_name: se74
+    working_dir: /root
+    hostname: dockerized_se74
+    stdin_open: true
+    tty: true
+    command: /bin/zsh
+    
