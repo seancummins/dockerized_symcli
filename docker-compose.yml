@@ -3,29 +3,44 @@ se8:
     volumes: 
         - ~:/root
     container_name: se8
+    # Use "devices" to pass gatekeepers into containers if desired:
+    #devices:
+    #    - /dev/sdk:/dev/sdk
+    #    - /dev/sdl:/dev/sdl
     working_dir: /root
     hostname: dockerized_se8
     stdin_open: true
     tty: true
-    command: /bin/zsh
+    command: /bin/bash
+    privileged: true
 se76:
     build: se76
     volumes: 
         - ~:/root
     container_name: se76
+    # Use "devices" to pass gatekeepers into containers if desired:
+    #devices:
+    #    - /dev/sdk:/dev/sdk
+    #    - /dev/sdl:/dev/sdl
     working_dir: /root
     hostname: dockerized_se76
     stdin_open: true
     tty: true
-    command: /bin/zsh
+    command: /bin/bash
+    privileged: true
 se74:
     build: se74
     volumes: 
         - ~:/root
     container_name: se74
+    # Use "devices" to pass gatekeepers into containers if desired:
+    #devices:
+    #    - /dev/sdk:/dev/sdk
+    #    - /dev/sdl:/dev/sdl
     working_dir: /root
     hostname: dockerized_se74
     stdin_open: true
     tty: true
-    command: /bin/zsh
+    command: /bin/bash
+    privileged: true
     

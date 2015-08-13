@@ -1,7 +1,7 @@
 # Version 0.0.4
 FROM opensuse:harlequin
 MAINTAINER Sean Cummins "sean.cummins@emc.com"
-RUN zypper -n install zsh glibc-32bit tar git sudo man wget libopenssl-devel-32bit python-pip vim strace curl ca-certificates-mozilla
+RUN zypper -n install zsh glibc-32bit gcc-32bit tar git sudo man wget libopenssl-devel-32bit python-pip vim strace curl ca-certificates-mozilla
 RUN easy_install-3.4 prettytable
 #RUN easy_install-2.7 prettytable
 RUN mkdir /scripts
