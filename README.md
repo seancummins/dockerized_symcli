@@ -69,9 +69,13 @@ Unfortunately this was one part of the setup I couldn't automate with Vagrant --
 
 You want the Linux binaries even if you're doing this on Mac or Windows, because Solutions Enabler will ultimately be running in a Linux container.
 
-* Download [SE 8.0.3](https://download.emc.com/downloads/DL58417_Solutions-Enabler-8.0.3-for-Linux-x64.tar.gz) and move it into the "dockerized_symcli/se8" directory.
-* Download [SE 7.6](https://download.emc.com/downloads/DL53239_se7628-Linux-i386-ni.tar.gz.gz) and move it into the "dockerized_symcli/se76" directory.
-* Download [SE 7.4](https://download.emc.com/downloads/DL39938_se7400-Linux-i386-ni.tar.gz.tar.gz) and move it into the "dockerized_symcli/se74" directory.
+* Download [SE 9.0](https://download.emc.com/downloads/DL88929_Solutions-Enabler-9.0.0.0-for-Linux-x64.tar.gz?source=OLS) and move it into the "dockerized_symcli/se90" directory.
+* Download [SE 8.4](https://download.emc.com/downloads/DL84200_Solutions-Enabler-8.4.0.7-for-Linux-x64.gz?source=OLS) and move it into the "dockerized_symcli/se84" directory.
+* Download [SE 8.3](https://download.emc.com/downloads/DL82868_Solutions-Enabler-8.3.0.22-for-Linux-x64.tar.gz?source=OLS) and move it into the "dockerized_symcli/se83" directory.
+* Download [SE 8.2](https://download.emc.com/downloads/DL69077_Solutions-Enabler-8.2.0.0-for-Linux-x64.gz?source=OLS) and move it into the "dockerized_symcli/se82" directory.
+* Download [SE 8.1](https://download.emc.com/downloads/DL66737_Solutions-Enabler-8.1.2.0-for-Linux-x64.tar.gz?source=OLS) and move it into the "dockerized_symcli/se81" directory.
+* Download [SE 7.6](https://download.emc.com/downloads/DL59877_Solutions-Enabler-7.6.2.56-installation-package-for-Linux-x86-and-x64.tgz?source=OLS) and move it into the "dockerized_symcli/se76" directory.
+
 
 ## Step 5: Deploy
 

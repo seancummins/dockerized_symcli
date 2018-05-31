@@ -43,10 +43,38 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision "docker" do |d|
-    d.build_image "/vagrant/se8", args: "-t='se8'"
-    d.run "se8",
+    d.build_image "/vagrant/se90", args: "-t='se90'"
+    d.run "se90",
       cmd: "/bin/bash",
-      args: "-v /home/vagrant/host:/root -w /root -h dockerized_se8 --name='se8' -i -t"
+      args: "-v /home/vagrant/host:/root -w /root -h dockerized_se90 --name='se90' -i -t"
+  end
+
+  config.vm.provision "docker" do |d|
+    d.build_image "/vagrant/se84", args: "-t='se84'"
+    d.run "se84",
+      cmd: "/bin/bash",
+      args: "-v /home/vagrant/host:/root -w /root -h dockerized_se84 --name='se84' -i -t"
+  end
+
+  config.vm.provision "docker" do |d|
+    d.build_image "/vagrant/se83", args: "-t='se83'"
+    d.run "se83",
+      cmd: "/bin/bash",
+      args: "-v /home/vagrant/host:/root -w /root -h dockerized_se83 --name='se83' -i -t"
+  end
+
+  config.vm.provision "docker" do |d|
+    d.build_image "/vagrant/se82", args: "-t='se82'"
+    d.run "se82",
+      cmd: "/bin/bash",
+      args: "-v /home/vagrant/host:/root -w /root -h dockerized_se82 --name='se82' -i -t"
+  end
+
+  config.vm.provision "docker" do |d|
+    d.build_image "/vagrant/se81", args: "-t='se81'"
+    d.run "se81",
+      cmd: "/bin/bash",
+      args: "-v /home/vagrant/host:/root -w /root -h dockerized_se81 --name='se81' -i -t"
   end
 
   config.vm.provision "docker" do |d|
@@ -56,11 +84,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       args: "-v /home/vagrant/host:/root -w /root -h dockerized_se76 --name='se76' -i -t"
   end
 
-  config.vm.provision "docker" do |d|
-    d.build_image "/vagrant/se74", args: "-t='se74'"
-    d.run "se74",
-      cmd: "/bin/bash",
-      args: "-v /home/vagrant/host:/root -w /root -h dockerized_se74 --name='se74' -i -t"
-  end
 
 end

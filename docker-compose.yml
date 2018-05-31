@@ -1,14 +1,74 @@
-se8:
-    build: se8
+se90:
+    build: se90
     volumes: 
         - ~:/root
-    container_name: se8
+    container_name: se90
     # Use "devices" to pass gatekeepers into containers if desired:
     #devices:
     #    - /dev/sdk:/dev/sdk
     #    - /dev/sdl:/dev/sdl
     working_dir: /root
-    hostname: dockerized_se8
+    hostname: dockerized_se90
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    privileged: true
+se84:
+    build: se84
+    volumes: 
+        - ~:/root
+    container_name: se84
+    # Use "devices" to pass gatekeepers into containers if desired:
+    #devices:
+    #    - /dev/sdk:/dev/sdk
+    #    - /dev/sdl:/dev/sdl
+    working_dir: /root
+    hostname: dockerized_se84
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    privileged: true
+se83:
+    build: se83
+    volumes: 
+        - ~:/root
+    container_name: se83
+    # Use "devices" to pass gatekeepers into containers if desired:
+    #devices:
+    #    - /dev/sdk:/dev/sdk
+    #    - /dev/sdl:/dev/sdl
+    working_dir: /root
+    hostname: dockerized_se83
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    privileged: true
+se82:
+    build: se82
+    volumes: 
+        - ~:/root
+    container_name: se82
+    # Use "devices" to pass gatekeepers into containers if desired:
+    #devices:
+    #    - /dev/sdk:/dev/sdk
+    #    - /dev/sdl:/dev/sdl
+    working_dir: /root
+    hostname: dockerized_se82
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    privileged: true
+se81:
+    build: se81
+    volumes: 
+        - ~:/root
+    container_name: se81
+    # Use "devices" to pass gatekeepers into containers if desired:
+    #devices:
+    #    - /dev/sdk:/dev/sdk
+    #    - /dev/sdl:/dev/sdl
+    working_dir: /root
+    hostname: dockerized_se81
     stdin_open: true
     tty: true
     command: /bin/bash
@@ -28,19 +88,3 @@ se76:
     tty: true
     command: /bin/bash
     privileged: true
-se74:
-    build: se74
-    volumes: 
-        - ~:/root
-    container_name: se74
-    # Use "devices" to pass gatekeepers into containers if desired:
-    #devices:
-    #    - /dev/sdk:/dev/sdk
-    #    - /dev/sdl:/dev/sdl
-    working_dir: /root
-    hostname: dockerized_se74
-    stdin_open: true
-    tty: true
-    command: /bin/bash
-    privileged: true
-    
