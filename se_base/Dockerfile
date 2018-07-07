@@ -1,7 +1,7 @@
 # Version 0.0.4
 FROM opensuse:leap
 MAINTAINER Sean Cummins "sean.cummins@emc.com"
-RUN zypper -n install zsh glibc-32bit gcc-32bit tar git sudo man wget libopenssl-devel-32bit python-pip python3-pip vim strace curl ca-certificates-mozilla
+RUN zypper -n install zsh glibc-32bit gcc-32bit tar git sudo hostname man wget libopenssl-devel-32bit python-pip python3-pip vim strace curl ca-certificates-mozilla
 RUN pip install prettytable
 RUN mkdir /scripts
 WORKDIR /scripts

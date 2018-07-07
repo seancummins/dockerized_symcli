@@ -3,6 +3,7 @@ services:
     se_base:
         build: ./se_base
         image: se_base:latest
+        command: ls
     se90:
         build: se90
         depends_on:

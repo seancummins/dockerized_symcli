@@ -16,17 +16,15 @@ Vagrant / Vagrantfile method of provisioning is deprecated; use docker-compose i
 * From main project directory, create container images and containers:
 
 ~~~bash
-# Create container images
-docker-compose build
-# Create containers
-docker-compose create
+# Create container images and containers
+docker-compose up --no-start
 ~~~
 
 * Normal usage
 
 ~~~bash
 # Start a particular container and attach to it
-docker ps -a
+docker containers ls
 docker start se90
 docker attach se90
 # Perform SYMCLI work interactively from within container
@@ -36,6 +34,9 @@ symcfg list
 # Exit container
 exit
 ~~~
+
+* Customizations to the environment can be made to the se_base Dockerfile, and will be inherited by the version-specific SE containers.
+
 
 ## Introduction
 
