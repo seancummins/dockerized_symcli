@@ -1,5 +1,5 @@
 # Version 0.0.5
-FROM seancummins/se_base
+FROM se_base
 MAINTAINER Sean Cummins "sean.cummins@emc.com"
 ADD se76256-Linux-i386-ni.tar.gz /tmp
 WORKDIR /tmp

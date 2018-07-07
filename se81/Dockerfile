@@ -1,5 +1,5 @@
 # Version 0.0.5
-FROM seancummins/se_base
+FROM se_base
 MAINTAINER Sean Cummins "sean.cummins@emc.com"
 ADD se8120-Linux-x86_64-ni.tar.gz /tmp
 WORKDIR /tmp
