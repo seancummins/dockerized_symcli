@@ -36,7 +36,7 @@ symcfg list
 exit
 
 # Execute a SYMCLI command non-interactively
-docker attach se90
+docker start se90
 docker exec --env SYMCLI_DB_FILE=Documents/Temp/examplepath/symapi_db.bin se90 symcfg list
 ~~~
 
