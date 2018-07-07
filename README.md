@@ -5,6 +5,7 @@
 Vagrant / Vagrantfile method of provisioning is deprecated; use docker-compose instead:
 
 * Install Docker environment, including Docker Compose
+* Ensure that you have shared the C drive under Docker 'Shared Drives' Setting; this enables passthrough of your local home directory to the /root directory within each container.
 * Clone Github repo to local environment
 * Download [SE 9.0](https://download.emc.com/downloads/DL88929_Solutions-Enabler-9.0.0.0-for-Linux-x64.tar.gz?source=OLS) and move it into the "dockerized_symcli/se90" directory.
 * Download [SE 8.4](https://download.emc.com/downloads/DL84200_Solutions-Enabler-8.4.0.7-for-Linux-x64.gz?source=OLS) and move it into the "dockerized_symcli/se84" directory.
@@ -23,7 +24,7 @@ docker-compose up --no-start
 * Normal usage
 
 ~~~bash
-# Start a particular container and attach to it
+# Start a particular container and attach to it interactively
 docker containers ls
 docker start se90
 docker attach se90
@@ -33,6 +34,10 @@ export SYMCLI_DB_FILE=symapi_db.bin
 symcfg list
 # Exit container
 exit
+
+# Execute a SYMCLI command non-interactively
+docker attach se90
+docker exec --env SYMCLI_DB_FILE=Documents/Temp/examplepath/symapi_db.bin se90 symcfg list
 ~~~
 
 * Customizations to the environment can be made to the se_base Dockerfile, and will be inherited by the version-specific SE containers.
